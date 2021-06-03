@@ -8,5 +8,6 @@ RSpec.describe Spacecraft do
     expect(daedalus).to be_an_instance_of(Spacecraft)
     expect(daedalus.name).to eq('Daedalus')
     expect(daedalus.fuel).to eq(400)
+    expect(daedalus.requirements).to eq([])
   end
 end
