@@ -36,4 +36,15 @@ RSpec.describe Flotilla do
 
     expect(seventh_flotilla.personnel).to eq([kathy, polly, rover, sampson])
   end
+
+  it "recommends personnel" do
+    seventh_flotilla = Flotilla.new({designation: 'Seventh Flotilla'})
+    daedalus = Spacecraft.new({name: 'Daedalus', fuel: 400})
+    kathy = Person.new('Kathy Chan', 10)
+    polly = Person.new('Polly Parker', 8)
+    rover = Person.new('Rover Henriette', 1)
+    sampson = Person.new('Sampson Edwards', 7)
+
+    expect(seventh_flotilla.recommend_personnel).to eq([kathy, rover])
+  end
 end
