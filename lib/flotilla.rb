@@ -11,5 +11,14 @@ class Flotilla
 
   def add_ship(ship)
     @ships << ship
-  end 
+  end
+
+  def add_personnel(personnel)
+    @personnel << personnel
+  end
+
+  def recommend_personnel(personnel)
+    @personnel << personnel
+
+  end
 end
